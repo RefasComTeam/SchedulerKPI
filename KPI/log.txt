@@ -1,0 +1,24 @@
+2024-03-28T15:39:02.182Z - XOMOE0STA cron job started!
+2024-03-28T15:39:02.182Z - Cron job started!
+2024-03-28T15:39:02.307Z - deleted rows: 210
+2024-03-28T15:39:03.037Z - inserted rows: 210
+2024-03-28T15:39:03.037Z - XOMOE1STA cron job started!
+2024-03-28T15:39:03.107Z - deleted rows: 209
+2024-03-28T15:39:03.774Z - inserted rows: 209
+2024-03-28T15:39:03.775Z - XOMOE2STA cron job started!
+2024-03-28T15:39:03.992Z - deleted rows: 209
+2024-03-28T15:39:04.625Z - inserted rows: 209
+2024-03-28T15:39:04.625Z - XOMOE3STA cron job started!
+2024-03-28T15:39:04.685Z - deleted rows: 209
+2024-03-28T15:39:05.343Z - inserted rows: 209
+2024-03-28T15:39:05.343Z - XOMOE4STA cron job started!
+2024-03-28T15:39:05.922Z - deleted rows: 1288
+2024-03-28T15:39:10.018Z - inserted rows: 1288
+2024-03-28T15:39:10.018Z - XOMOE5STA cron job started!
+2024-03-28T15:39:10.092Z - deleted rows: 0
+2024-03-28T15:39:11.207Z - inserted rows: 368
+2024-03-28T15:39:11.208Z - XOMOE6STA cron job started!
+2024-03-28T15:39:11.343Z - deleted rows: 1284
+2024-03-28T15:39:15.116Z - inserted rows: 1284
+2024-03-28T15:39:15.116Z - XOMOE7STA cron job started!
+2024-03-28T15:39:15.801Z - deleted rows: 4567
