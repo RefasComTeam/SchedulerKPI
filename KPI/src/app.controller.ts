@@ -6,7 +6,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  async getHello(): Promise<any> {
-    return await this.appService.getHello();
+  updateData(): string {
+    this.appService.updateData();
+    return "Aggiornamento avviato";
   }
 }

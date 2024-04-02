@@ -46,9 +46,9 @@ export class AppService {
     // this.Db2Client = new Db2Service();
     this.startJob();
   }
-  async getHello(): Promise<any> {
+  updateData(): void {
 
-    //  return await this.Db2Client.getOrdini();
+    this.startJob();
 
   }
 
@@ -75,7 +75,7 @@ export class AppService {
 
   //@Interval(10000) in ms, ogni 10 secondi
 
-  @Cron(CronExpression.EVERY_30_MINUTES)
+  @Cron(CronExpression.EVERY_DAY_AT_7AM)
   async handleCron() {
 
     await this.startJob();
