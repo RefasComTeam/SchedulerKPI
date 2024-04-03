@@ -43,4 +43,7 @@ export class Xmoe6Sta {
     scale: 0,
   })
   ORE_MAC_TOTALI: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

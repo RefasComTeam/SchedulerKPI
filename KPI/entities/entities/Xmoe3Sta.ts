@@ -53,4 +53,7 @@ export class Xmoe3Sta {
     scale: 0,
   })
   ORE_ALIM_U6: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

@@ -25,4 +25,7 @@ export class Xmoe0Sta {
 
   @Column("varchar", { name: "CODICE", nullable: true, length: 5 })
   CODICE: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

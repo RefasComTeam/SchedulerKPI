@@ -29,4 +29,7 @@ export class Xmoe2Sta {
     scale: 0,
   })
   DISP_ORE_PREVISTE: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

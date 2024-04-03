@@ -29,4 +29,7 @@ export class Xmoe1Sta {
     scale: 0,
   })
   IND_OEE_TREND: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

@@ -147,4 +147,7 @@ export class Xmoe7Sta {
     scale: 2,
   })
   PERF_ASS: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }

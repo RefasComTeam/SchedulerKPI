@@ -38,4 +38,7 @@ export class Xmoe5Sta {
     scale: 0,
   })
   PRESIDIO: string | null;
+
+  @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
+  TIPOLOGIA_LINEA: string | null;
 }
