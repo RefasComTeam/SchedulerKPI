@@ -150,4 +150,7 @@ export class Xmoe7Sta {
 
   @Column("varchar", { name: "TIPOLOGIA_LINEA", nullable: true, length: 5 })
   TIPOLOGIA_LINEA: string | null;
+
+  @Column("varchar", { name: "SETTIMANA_DES", nullable: true, length: 20 })
+  SETTIMANA_DES: string | null;
 }

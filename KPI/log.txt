@@ -1,11 +1,29 @@
-2024-04-03T07:35:23.676Z - XOMOE0STA cron job started!
-2024-04-03T07:35:23.675Z - Cron job started!
-2024-04-03T07:35:24.076Z - XOMOE1STA cron job started!
-2024-04-03T07:35:24.085Z - XOMOE2STA cron job started!
-2024-04-03T07:35:24.093Z - XOMOE3STA cron job started!
-2024-04-03T07:35:24.104Z - XOMOE4STA cron job started!
-2024-04-03T07:35:24.111Z - XOMOE5STA cron job started!
-2024-04-03T07:35:24.116Z - XOMOE6STA cron job started!
-2024-04-03T07:35:24.123Z - XOMOE7STA cron job started!
-2024-04-03T07:35:24.128Z - XOMOE8STA cron job started!
-2024-04-03T07:35:24.144Z - Cron job finished!
+2024-04-09T15:39:05.519Z - XOMOE0STA cron job started!
+2024-04-09T15:39:05.519Z - Cron job started!
+2024-04-09T15:39:05.829Z - deleted rows: 210
+2024-04-09T15:39:06.546Z - inserted rows: 210
+2024-04-09T15:39:06.546Z - XOMOE1STA cron job started!
+2024-04-09T15:39:06.772Z - deleted rows: 209
+2024-04-09T15:39:07.423Z - inserted rows: 209
+2024-04-09T15:39:07.423Z - XOMOE2STA cron job started!
+2024-04-09T15:39:07.582Z - deleted rows: 209
+2024-04-09T15:39:08.287Z - inserted rows: 209
+2024-04-09T15:39:08.287Z - XOMOE3STA cron job started!
+2024-04-09T15:39:08.373Z - deleted rows: 209
+2024-04-09T15:39:09.095Z - inserted rows: 209
+2024-04-09T15:39:09.095Z - XOMOE4STA cron job started!
+2024-04-09T15:39:09.713Z - deleted rows: 1271
+2024-04-09T15:39:14.190Z - inserted rows: 1271
+2024-04-09T15:39:14.190Z - XOMOE5STA cron job started!
+2024-04-09T15:39:14.312Z - deleted rows: 368
+2024-04-09T15:39:15.523Z - inserted rows: 368
+2024-04-09T15:39:15.523Z - XOMOE6STA cron job started!
+2024-04-09T15:39:15.749Z - deleted rows: 1244
+2024-04-09T15:39:19.927Z - inserted rows: 1244
+2024-04-09T15:39:19.927Z - XOMOE7STA cron job started!
+2024-04-09T15:39:20.712Z - deleted rows: 4130
+2024-04-09T15:39:35.201Z - inserted rows: 4130
+2024-04-09T15:39:35.201Z - XOMOE8STA cron job started!
+2024-04-09T15:39:38.513Z - deleted rows: 16369
+2024-04-09T15:40:37.262Z - inserted rows: 16369
+2024-04-09T15:40:37.262Z - Cron job finished!
