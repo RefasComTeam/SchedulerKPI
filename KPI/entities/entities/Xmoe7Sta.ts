@@ -98,7 +98,7 @@ export class Xmoe7Sta {
   OEE_QUA: string | null;
 
   @Column("decimal", { name: "OEE", nullable: true, precision: 4, scale: 0 })
-  oee: string | null;
+  OEE: string | null;
 
   @Column("decimal", {
     name: "ORE_MAN_PREV",
@@ -106,7 +106,7 @@ export class Xmoe7Sta {
     precision: 12,
     scale: 4,
   })
-  OEE: string | null;
+  ORE_MAN_PREV: string | null;
 
   @Column("decimal", {
     name: "ORE_MAN_EFF",
