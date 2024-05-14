@@ -9,3 +9,4 @@ export { Xmoe5Sta } from './Xmoe5Sta';
 export { Xmoe6Sta } from './Xmoe6Sta';
 export { Xmoe7Sta } from './Xmoe7Sta';
 export { Xmoe8Sta } from './Xmoe8Sta';
+export { Xfoxcsta } from './Xfoxcsta';

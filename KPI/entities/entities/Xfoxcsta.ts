@@ -1,46 +1,47 @@
-import { Column, Entity } from "typeorm";
+import { Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity("XFOXCSTA", { schema: "RefasKpi" })
 export class Xfoxcsta {
-  @Column("varchar", { name: "FORNITORE_COD", nullable: true, length: 6 })
-  fornitoreCod: string | null;
+
+  @PrimaryColumn("varchar", { name: "FORNITORE_COD", length: 6 })
+  FORNITORE_COD: string | null;
 
   @Column("varchar", { name: "FORNITORE_DES", nullable: true, length: 35 })
-  fornitoreDes: string | null;
+  FORNITORE_DES: string | null;
 
   @Column("varchar", {
     name: "FORNITORE_CLASSE_ABC",
     nullable: true,
     length: 1,
   })
-  fornitoreClasseAbc: string | null;
+  FORNITORE_CLASSE_ABC: string | null;
 
   @Column("varchar", { name: "INDIRIZZO_FOR", nullable: true, length: 35 })
-  indirizzoFor: string | null;
+  INDIRIZZO_FOR: string | null;
 
   @Column("varchar", { name: "LOCALITA_FOR", nullable: true, length: 25 })
-  localitaFor: string | null;
+  LOCALITA_FOR: string | null;
 
   @Column("varchar", { name: "PROVINCIA_FOR", nullable: true, length: 2 })
-  provinciaFor: string | null;
+  PROVINCIA_FOR: string | null;
 
   @Column("varchar", { name: "CAP_FOR", nullable: true, length: 9 })
-  capFor: string | null;
+  CAP_FOR: string | null;
 
   @Column("varchar", { name: "NAZIONE_FOR", nullable: true, length: 3 })
-  nazioneFor: string | null;
+  NAZIONE_FOR: string | null;
 
   @Column("varchar", { name: "MACRO_COD", nullable: true, length: 4 })
-  macroCod: string | null;
+  MACRO_COD: string | null;
 
   @Column("varchar", { name: "MACRO_DES", nullable: true, length: 50 })
-  macroDes: string | null;
+  MACRO_DES: string | null;
 
   @Column("varchar", { name: "CLASSE_COD", nullable: true, length: 4 })
-  classeCod: string | null;
+  CLASSE_COD: string | null;
 
   @Column("varchar", { name: "CLASSE_DES", nullable: true, length: 50 })
-  classeDes: string | null;
+  CLASSE_DES: string | null;
 
   @Column("decimal", {
     name: "FATTURATO",
@@ -48,7 +49,7 @@ export class Xfoxcsta {
     precision: 17,
     scale: 2,
   })
-  fatturato: string | null;
+  FATTURATO: string | null;
 
   @Column("decimal", {
     name: "NUM_ORDINI_EMESSI",
@@ -56,7 +57,7 @@ export class Xfoxcsta {
     precision: 7,
     scale: 0,
   })
-  numOrdiniEmessi: string | null;
+  NUM_ORDINI_EMESSI: string | null;
 
   @Column("decimal", {
     name: "NUM_CODICI_GESTITI",
@@ -64,7 +65,7 @@ export class Xfoxcsta {
     precision: 7,
     scale: 0,
   })
-  numCodiciGestiti: string | null;
+  NUM_CODICI_GESTITI: string | null;
 
   @Column("decimal", {
     name: "NUM_PROD_IMPATTATI",
@@ -72,10 +73,10 @@ export class Xfoxcsta {
     precision: 7,
     scale: 0,
   })
-  numProdImpattati: string | null;
+  NUM_PROD_IMPATTATI: string | null;
 
   @Column("varchar", { name: "STRATEGICO", nullable: true, length: 1 })
-  strategico: string | null;
+  STRATEGICO: string | null;
 
   @Column("decimal", {
     name: "PESO_FATTURATO",
@@ -83,7 +84,7 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoFatturato: string | null;
+  PESO_FATTURATO: string | null;
 
   @Column("decimal", {
     name: "PESO_NUMERO_ORDINI",
@@ -91,7 +92,7 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoNumeroOrdini: string | null;
+  PESO_NUMERO_ORDINI: string | null;
 
   @Column("decimal", {
     name: "PESO_CODICI_GESTITI",
@@ -99,7 +100,7 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoCodiciGestiti: string | null;
+  PESO_CODICI_GESTITI: string | null;
 
   @Column("decimal", {
     name: "PESO_PROD_IMPATTANTI",
@@ -107,7 +108,7 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoProdImpattanti: string | null;
+  PESO_PROD_IMPATTANTI: string | null;
 
   @Column("decimal", {
     name: "PESO_STRATEGICO",
@@ -115,7 +116,7 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoStrategico: string | null;
+  PESO_STRATEGICO: string | null;
 
   @Column("decimal", {
     name: "PESO_TOTALE",
@@ -123,13 +124,13 @@ export class Xfoxcsta {
     precision: 12,
     scale: 5,
   })
-  pesoTotale: string | null;
+  PESO_TOTALE: string | null;
 
   @Column("decimal", { name: "OTD", nullable: true, precision: 5, scale: 2 })
-  otd: string | null;
+  OTD: string | null;
 
   @Column("decimal", { name: "PPM", nullable: true, precision: 9, scale: 0 })
-  ppm: string | null;
+  PPM: string | null;
 
   @Column("decimal", {
     name: "LATIDUDINE",
@@ -137,7 +138,7 @@ export class Xfoxcsta {
     precision: 9,
     scale: 6,
   })
-  latidudine: string | null;
+  LATIDUDINE: string | null;
 
   @Column("decimal", {
     name: "LONGITUDINE",
@@ -145,5 +146,20 @@ export class Xfoxcsta {
     precision: 9,
     scale: 6,
   })
-  longitudine: string | null;
+  LONGITUDINE: string | null;
+
+  @Column("varchar", { name: "LEADTIME_MEDIO_EFF", nullable: true, length: 20 })
+  LEADTIME_MEDIO_EFF: string | null;
+
+  @Column("varchar", { name: "LEADTIME_MEDIO_EFF_GG", nullable: true, length: 20 })
+  LEADTIME_MEDIO_EFF_GG: string | null;
+
+  @Column("varchar", { name: "LEADTIME_MEDIO_PRE", nullable: true, length: 20 })
+  LEADTIME_MEDIO_PRE: string | null;
+
+  @Column("varchar", { name: "LEADTIME_MEDIO_PRE_GG", nullable: true, length: 20 })
+  LEADTIME_MEDIO_PRE_GG: string | null;
+
+  @Column("varchar", { name: "LEADTIME_ORDINI_NO", nullable: true, length: 20 })
+  LEADTIME_ORDINI_NO: string | null;
 }

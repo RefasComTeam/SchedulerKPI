@@ -16,6 +16,7 @@ import { Xmoe6Sta } from 'entities/entities/Xmoe6Sta';
 import { Xmoe7Sta } from 'entities/entities/Xmoe7Sta';
 import { Xmoe8Sta } from 'entities/entities/Xmoe8Sta';
 import { LogService } from './utils/logService';
+import { Xfoxcsta } from 'entities/entities/Xfoxcsta';
 
 @Injectable()
 export class AppService {
@@ -42,7 +43,10 @@ export class AppService {
     @InjectRepository(Xmoe7Sta)
     private Xmoe7StaRepository: Repository<Xmoe7Sta>,
     @InjectRepository(Xmoe8Sta)
-    private Xmoe8StaRepository: Repository<Xmoe8Sta>) {
+    private Xmoe8StaRepository: Repository<Xmoe8Sta>,
+    @InjectRepository(Xfoxcsta)
+    private XfoxcstaRepository: Repository<Xfoxcsta>,
+  ) {
     // this.Db2Client = new Db2Service();
     this.startJob();
   }
@@ -96,14 +100,46 @@ export class AppService {
     await this.getXmoe7Sta();
     await this.getXmoe8Sta();
 
+    //fornitori
+    await this.getXfoxcsta();
+
     this.logService.writeLog('Cron job finished!');
+  }
+
+  async getXfoxcsta() {
+    try {
+      this.logService.writeLog('XFOXCSTA cron job started!');
+
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XFOXCSTA.php').pipe(
+        catchError((error: AxiosError) => {
+          this.logger.error(error.response.data);
+          throw 'An error happened!';
+        }),
+      ));
+
+      var newValues: Xfoxcsta[] = data.data;
+
+      var dRes: DeleteResult = await this.XfoxcstaRepository.delete({});
+
+      this.logService.writeLog('deleted rows: ' + dRes.affected);
+
+      var iRes = await this.XfoxcstaRepository.save(newValues);
+
+      this.logService.writeLog('inserted rows: ' + iRes.length);
+
+      return true;
+    }
+    catch (error) {
+      this.logger.error(error);
+      return false;
+    }
   }
 
   async getXmoe0Sta(): Promise<boolean> {
     try {
       this.logService.writeLog('XOMOE0STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE0STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE0STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -132,7 +168,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE1STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE1STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE1STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -162,7 +198,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE2STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE2STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE2STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -192,7 +228,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE3STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE3STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE3STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -221,7 +257,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE4STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE4STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE4STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -245,12 +281,12 @@ export class AppService {
       return false;
     }
   }
-  
+
   async getXmoe5Sta(): Promise<boolean> {
     try {
       this.logService.writeLog('XOMOE5STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE5STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE5STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -279,7 +315,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE6STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE6STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE6STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -308,7 +344,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE7STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE7STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE7STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';
@@ -337,7 +373,7 @@ export class AppService {
     try {
       this.logService.writeLog('XOMOE8STA cron job started!');
 
-      var data = await await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE8STA.php').pipe(
+      var data = await firstValueFrom(this.httpService.get('http://192.168.1.99:10088/refas/MYSQL/XMOE8STA.php').pipe(
         catchError((error: AxiosError) => {
           this.logger.error(error.response.data);
           throw 'An error happened!';

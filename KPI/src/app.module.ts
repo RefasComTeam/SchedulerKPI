@@ -6,7 +6,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { HttpModule } from '@nestjs/axios';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmMySqlConfigService } from 'repository/mysqlDbConf';
-import { Xmoe0Sta, Xmoe1Sta, Xmoe2Sta, Xmoe3Sta, Xmoe4Sta, Xmoe5Sta, Xmoe6Sta, Xmoe7Sta, Xmoe8Sta } from 'entities/entities/entities';
+import { Xmoe0Sta, Xmoe1Sta, Xmoe2Sta, Xmoe3Sta, Xmoe4Sta, Xmoe5Sta, Xmoe6Sta, Xmoe7Sta, Xmoe8Sta, Xfoxcsta } from 'entities/entities/entities';
 import { LogService } from './utils/logService';
 
 @Module({
@@ -23,7 +23,7 @@ import { LogService } from './utils/logService';
     TypeOrmModule.forFeature([Xmoe6Sta]),
     TypeOrmModule.forFeature([Xmoe7Sta]),
     TypeOrmModule.forFeature([Xmoe8Sta]),
-
+    TypeOrmModule.forFeature([Xfoxcsta])
   ],
   controllers: [AppController],
   providers: [AppService, Db2Service, LogService],

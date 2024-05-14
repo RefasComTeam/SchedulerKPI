@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from "@nestjs/typeorm";
-import { Xmoe0Sta, Xmoe1Sta, Xmoe2Sta, Xmoe3Sta, Xmoe4Sta, Xmoe5Sta, Xmoe6Sta, Xmoe7Sta, Xmoe8Sta} from "entities/entities/entities";
+import { Xfoxcsta, Xmoe0Sta, Xmoe1Sta, Xmoe2Sta, Xmoe3Sta, Xmoe4Sta, Xmoe5Sta, Xmoe6Sta, Xmoe7Sta, Xmoe8Sta} from "entities/entities/entities";
 
 
 @Injectable()
@@ -22,7 +22,9 @@ export class TypeOrmMySqlConfigService implements TypeOrmOptionsFactory {
           Xmoe5Sta,
           Xmoe6Sta,
           Xmoe7Sta,
-          Xmoe8Sta],
+          Xmoe8Sta,
+          Xfoxcsta
+        ],
         synchronize: true,
     };
   }
